@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+
+.border{
+  border-style: solid;
+  border-width: 1px;
+  height: 100px;
+  width: 90px;
+  margin-left: 10px;
+  padding: 8px;
+}
+
+</style>
+
+<script>
+var clickCount = 0;
+
+function myFunction() {
+  clickCount++;
+
+  var demoElement = document.getElementById("demo");
+
+  if (clickCount === 1) {
+   
+    demoElement.style.color = (demoElement.style.color === "magenta") ? "green" : "magenta";
+  } else if (clickCount === 2) {
+   
+    demoElement.innerHTML = "Mouse Click";
+    demoElement.style.color = "magenta";
+  } else if (clickCount === 3) {
+    demoElement.innerHTML = "Hello";
+    demoElement.style.color = "black";
+    clickCount = 0; // Reset the click count
+  }
+}
+</script>
+</head>
+<body>
+
+<div class="border">
+  <p id="demo">Hello</p>
+  <button type="button" onclick="myFunction()">Button</button>
+</div>
+
+</body>
+</html>
+
